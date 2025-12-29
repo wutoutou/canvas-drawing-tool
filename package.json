@@ -1,6 +1,6 @@
 {
   "name": "canvas-drawing-tool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A modular canvas drawing tool that can be embedded in any container",
   "main": "dist/canvas-drawing-tool.cjs.js",
   "module": "dist/canvas-drawing-tool.esm.js",

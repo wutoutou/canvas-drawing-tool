@@ -26,6 +26,7 @@
   "author": "wd",
   "license": "MIT",
   "repository": {
+    "url": "https://github.com/wutoutou/canvas-drawing-tool",
     "type": "git"
   },
   "devDependencies": {

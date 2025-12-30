@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Drawing Tool Demo</title>
+</head>
+<body>
+    <div id="drawing-container" style="width: 800px; height: 600px;"></div>
+    <div>
+        <button onclick="setTool('brush')">无边记</button>
+        <button onclick="setTool('rectangle')">矩形</button>
+        <button onclick="setTool('circle')">圆形</button>
+        <button onclick="setTool('polygon')">多边形</button>
+        <button onclick="setTool('select')">选中</button>
+        <button onclick="clearCanvas()">清空</button>
+    </div>
+
+    <script src="./dist/canvas-drawing-tool.umd.js"></script>
+    <script>
+
+      setTimeout(() => {
+        console.log(CanvasDrawingTool)
+      })
+        // 初始化绘图工具
+        const drawingTool = new CanvasDrawingTool.default('#drawing-container', {
+            width: 800,
+            height: 600,
+            backgroundColor: '#f0f0f0'
+        });
+
+        // 设置工具
+        function setTool(toolName) {
+            drawingTool.setTool(toolName);
+        }
+
+        // 清空画布
+        function clearCanvas() {
+            drawingTool.clear();
+        }
+
+        // 事件监听
+        drawingTool.on('shapeAdded', (event) => {
+            console.log('图形添加:', event.shape);
+        });
+
+        // 设置颜色和线宽
+        drawingTool.setColor('#ff0000');
+        drawingTool.setLineWidth(3);
+
+
+
+    </script>
+</body>
+</html>
